@@ -20,19 +20,20 @@ export default function HomePage() {
     }
 
     return (
-      <div id="CategoriesGrid">
+      <div className="recipeGrid">
         {data.categories.map((category) => (
           <Link
             key={category.idCategory}
             to={`/category/${category.strCategory}`}
-            className="category-card"
           >
-            <h3>{category.strCategory}</h3>
-            <img
-              src={category.strCategoryThumb}
-              alt={category.strCategory}
-              loading="lazy"
-            />
+            <div className="recipeCard">
+              <h2>{category.strCategory}</h2>
+              <img
+                src={category.strCategoryThumb}
+                alt={category.strCategory}
+                loading="lazy"
+              />
+            </div>
           </Link>
         ))}
       </div>

@@ -73,8 +73,7 @@ export default function FavoritesPage() {
 
   return (
     <section id="Favorites">
-      <PageHeader title="Favorites"/>
-
+      <PageHeader title="Favorites" />
       {getFavoritesList()}
     </section>
   );

@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+}
+
+section {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+}
+.recipeGrid {
+  justify-content: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.recipeCard {
+  width: 200px;
+  height: 250px;
+  text-decoration: none;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.recipeCard > h2 {
+  height: 15px;
+  font-size: medium;
+  color: var(--text);
+}
+
+.recipeCard > img {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+}

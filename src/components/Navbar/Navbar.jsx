@@ -5,15 +5,17 @@ function Navbar({}) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   return (
-    <header>
+    <header className="fill-x flx-col flx-around">
       <h1>Recipe Finder</h1>
-      <div>
-        <Link to="/">
-          <button>Categories</button>
-        </Link>
-        <Link to="/favorites">
-          <button>Favorites</button>
-        </Link>
+      <div className="fill-x flx-around">
+        <div>
+          <Link to="/">
+            <button>Categories</button>
+          </Link>
+          <Link to="/favorites">
+            <button>Favorites</button>
+          </Link>
+        </div>
 
         <div>
           <input type="text" onChange={(e) => setSearch(e.target.value)} />
