@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { FavoritesContext } from "../../context/FavoritesContext";
 
+import "./Recipe.css";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
 export default function RecipePage() {
@@ -50,26 +51,23 @@ export default function RecipePage() {
         >
           {isFavoriteMeal ? "Remove Favorite" : "Add Favorite"}
         </button>
-        <img
-          className="recipe-hero-image"
-          src={meal.strMealThumb}
-          alt={meal.strMeal}
-        />
+        <img id="RecipeHeroImage" src={meal.strMealThumb} alt={meal.strMeal} />
+
         {ingredientAmount > 0 && (
           <section id="IngredientsSection">
-            <h2>Ingredients</h2>
+            <h3>Ingredients</h3>
 
             {Array.from({ length: ingredientAmount }, (_, index) => (
               <li key={index}>
-                <span>{meal[`strIngredient${index}`]}</span>
-                <span>{meal[`strMeasure${index}`]}</span>
+                <span>{meal[`strIngredient${index + 1}`]}:</span>
+                <span>{meal[`strMeasure${index + 1}`]}</span>
               </li>
             ))}
           </section>
         )}
         {meal.strInstructions && (
           <section id="RecipeInstructions">
-            <h2>Instructions</h2>
+            <h3>Instructions</h3>
             <p>{meal.strInstructions}</p>
           </section>
         )}

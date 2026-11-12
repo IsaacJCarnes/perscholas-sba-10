@@ -8,14 +8,9 @@ function Navbar({}) {
     <header className="fill-x flx-col flx-around">
       <h1>Recipe Finder</h1>
       <div className="fill-x flx-around">
-        <div>
-          <Link to="/">
-            <button>Categories</button>
-          </Link>
-          <Link to="/favorites">
-            <button>Favorites</button>
-          </Link>
-        </div>
+        <Link to="/">
+          <button>Categories</button>
+        </Link>
 
         <div>
           <input type="text" onChange={(e) => setSearch(e.target.value)} />
@@ -27,6 +22,9 @@ function Navbar({}) {
             Search
           </button>
         </div>
+        <Link to="/favorites">
+          <button>Favorites</button>
+        </Link>
       </div>
     </header>
   );
